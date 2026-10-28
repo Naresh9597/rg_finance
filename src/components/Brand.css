@@ -1,0 +1,58 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-display);
+  line-height: 1;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0) 55%),
+    linear-gradient(145deg, #1a2a46, #0b1426);
+  border: 1px solid var(--line-strong);
+  box-shadow: inset 0 0 0 1px rgba(77, 163, 255, 0.15), 0 6px 18px -8px rgba(47, 123, 255, 0.6);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.brand-primary {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.brand-secondary {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.38em;
+  color: var(--muted);
+}
+
+.brand-lg .brand-mark {
+  width: 52px;
+  height: 52px;
+  font-size: 1.05rem;
+  border-radius: 14px;
+}
+
+.brand-lg .brand-primary {
+  font-size: 1.35rem;
+}
+
+.brand-lg .brand-secondary {
+  font-size: 0.72rem;
+}

@@ -1,0 +1,75 @@
+.services-grid {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service {
+  padding: 30px 28px 32px;
+  overflow: hidden;
+  /* Keeps the reveal transition (and its stagger delay) while adding hover feedback. */
+  transition:
+    opacity 0.8s var(--ease) var(--reveal-delay, 0ms),
+    transform 0.8s var(--ease) var(--reveal-delay, 0ms),
+    translate 0.4s var(--ease),
+    border-color 0.4s var(--ease);
+}
+
+.service::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(420px circle at 0% 0%, rgba(77, 163, 255, 0.12), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+  pointer-events: none;
+}
+
+.service:hover {
+  border-color: rgba(77, 163, 255, 0.45);
+}
+
+.service:hover {
+  translate: 0 -4px;
+}
+
+.service:hover::before {
+  opacity: 1;
+}
+
+.service-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  border: 1px solid rgba(77, 163, 255, 0.3);
+  color: var(--accent);
+  margin-bottom: 22px;
+}
+
+.service h3 {
+  font-size: 1.18rem;
+  margin-bottom: 10px;
+}
+
+.service p {
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+
+@media (min-width: 640px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
